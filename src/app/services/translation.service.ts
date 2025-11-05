@@ -24,7 +24,7 @@ export class TranslationService {
     const langs = ['en', 'fr', 'es'];
     
     langs.forEach(lang => {
-      this.http.get<Translations>(`/assets/i18n/${lang}.json`).subscribe({
+      this.http.get<Translations>(`assets/i18n/${lang}.json`).subscribe({
         next: (data) => {
           this.translations[lang] = data;
         },
