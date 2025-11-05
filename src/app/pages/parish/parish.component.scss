@@ -1,0 +1,130 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.parish-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.parish-section {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  h2 {
+    color: #34495e;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: #555;
+  }
+}
+
+.parish-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+  h3 {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+}
+
+// Tablet styles
+@media (max-width: 968px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .parish-section {
+    padding: 1.5rem;
+  }
+  
+  .parish-links {
+    gap: 1rem;
+    
+    h3 {
+      padding: 0.875rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 15px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  .parish-content {
+    gap: 1.5rem;
+  }
+  
+  .parish-section {
+    padding: 1.25rem;
+    
+    h2 {
+      font-size: 1.3rem;
+    }
+    
+    p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .parish-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    
+    h3 {
+      text-align: center;
+      padding: 0.75rem 1rem;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 10px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .parish-section {
+    padding: 1rem;
+    
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}

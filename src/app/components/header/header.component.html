@@ -1,0 +1,38 @@
+<header>
+  <div class="container">
+    <div class="logo">
+      <h1>{{ 'HEADER.TITLE' | translate }}</h1>
+    </div>
+    
+    <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Toggle menu">
+      <span class="hamburger" [class.open]="isMobileMenuOpen"></span>
+    </button>
+
+    <nav [class.mobile-open]="isMobileMenuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()">{{ 'HEADER.HOME' | translate }}</a>
+      <div class="dropdown">
+        <a routerLink="/parish" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.PARISH' | translate }}</a>
+      </div>
+      <a routerLink="/campaigns" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.CAMPAIGNS' | translate }}</a>
+      <div class="dropdown">
+        <a routerLink="/masses" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.MASSES' | translate }}</a>
+      </div>
+      <div class="dropdown">
+        <a routerLink="/events" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.EVENTS' | translate }}</a>
+      </div>
+      <a routerLink="/news" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.NEWS' | translate }}</a>
+      <a routerLink="/committees" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.COMMITTEES' | translate }}</a>
+      <a routerLink="/volunteering" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.VOLUNTEERING' | translate }}</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'HEADER.CONTACT' | translate }}</a>
+      <div class="mobile-actions">
+        <a routerLink="/donation" class="donation-btn" (click)="closeMobileMenu()">{{ 'HEADER.DONATE' | translate }}</a>
+        <app-language-switcher></app-language-switcher>
+      </div>
+    </nav>
+    
+    <div class="desktop-actions">
+      <a routerLink="/donation" class="donation-btn">{{ 'HEADER.DONATE' | translate }}</a>
+      <app-language-switcher></app-language-switcher>
+    </div>
+  </div>
+</header>
